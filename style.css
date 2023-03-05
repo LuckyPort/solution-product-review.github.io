@@ -1,0 +1,121 @@
+:root{
+    --primary-cyan: hsl(158, 36%, 37%);
+    --primary-cream: hsl(30, 38%, 92%);
+    --dark-blue:  hsl(212, 21%, 14%);
+    --grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+    --paragraph: 14px;
+    --font-satu: "Montserrat";
+    --font-dua: "Fraunces"
+}
+html {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.project{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    background-color: var(--primary-cream);
+}
+.project-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.kartu{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.kartu-kiri{
+    background-image: url("./images/image-product-desktop.jpg");
+    flex: 1;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.kartu-kanan{
+    box-sizing: border-box;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+}
+.kartu-kanan > p{
+    font-family: var(--font-satu);
+    font-size: 14px;
+    color: var(--grayish-blue) ;
+}
+.kartu-kanan > h1{
+    font-family: var(--font-dua);
+}
+.kartu-kanan > h1 > span{
+    font-size: var(--paragraph);
+    vertical-align: 50%;
+    color: var(--grayish-blue);
+    margin-left: 1rem;
+    text-decoration: line-through ;
+}
+.add-cart{
+    position: relative;
+    background-color: var(--primary-cyan);
+    outline: none;
+    border: none;
+    border-radius: 10px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: .5s ease;
+    height: 50px;
+
+}
+.add-cart:hover{
+    background-color: var(--dark-blue);
+    transition: .5s ease;
+}
+.attribution{
+    text-align: center;
+    font-family: var(--font-satu);
+    color: #fff;
+    background-color: #191919;
+    padding: 10px
+}
+.attribution > a{
+    color: var(--primary-cream)
+}
+
+@media screen and (max-width: 700px) {
+    .kartu{
+        flex-direction: column  ;
+        height: 90%;
+        width: 90%;
+    }
+    .kartu-kiri{
+        background-image: url(/images/image-product-mobile.jpg);
+        background-size: contain 100%;
+    }
+}
